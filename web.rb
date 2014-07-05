@@ -1,17 +1,23 @@
+require 'rubygems'
 require 'sinatra'
+require 'haml'
 
 get '/' do
-  'This is the Home Page'
+  haml :index
 end
 
-get '/coding' do
-  'This is the coding page'
+get '/development' do
+  haml :development
+end
+
+get '/writing' do
+  haml :writing
 end
 
 get '/speaking' do
-  'This is the speaking page'
+  haml :speaking
 end
 
 get '/contact' do
-  'This is the contact page'
+  haml :contact
 end
