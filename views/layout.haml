@@ -2,9 +2,51 @@
 %html
   %head
     %title Nell Shamrell-Harrington's Website
-    %link(rel="stylesheet" href="css/bootstrap.css")
+    %link(rel="stylesheet" href="css/bootstrap.min.css")
+    %link(rel="stylesheet" href="css/bootstrapOverload.css")
     %link(rel="stylesheet" href="css/bootstrap-responsive.css")
+    %link(rel="stylesheet" href="css/bootstrap-social.css")
+    %link(rel="stylesheet" href="css/font-awesome.min.css")
     %script(src="/js/bootstrap.min.js")
 
-    #content
-      =yield
+    .container
+      %h1
+        Nell Shamrell-Harrington
+      .navbar
+        .navbar-inner
+          %ul{:class=>"nav"}
+            %li
+              %a{:href=>"/"}Home
+            %li
+              %a{:href=>"development"}Development
+            %li
+              %a{:href=>"speaking"}Speaking
+            %li
+              %a{:href=>"writing"}Writing
+            %li
+              %a{:href=>"contact"}Contact
+      .row
+        .span8
+          .container
+            %h2
+              Main content section
+            .panel
+              #content
+              =yield
+        .span3
+          %h2 Side bar section
+          %p Here's a tweet
+          %p Here's another tweet
+          %p Here's yet another tweet
+
+      .row
+        .span8
+          .footer
+            %a{:href=>"https://twitter.com/nellshamrell",:class=>"btn btn-social-icon btn-twitter"}
+              %i{:class=>"fa fa-twitter"}
+            %a{:href=>"https://github.com/nellshamrell",:class=>"btn btn-social-icon btn-github"}
+              %i{:class=>"fa fa-github"}
+            %a{:href=>"https://www.linkedin.com/pub/nell-shamrell/14/7b2/294",:class=>"btn btn-social-icon btn-linkedin"}
+              %i{:class=>"fa fa-linkedin"}
+          %p
+            Copyright Nell Shamrell-Harrington, 2014
